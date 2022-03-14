@@ -29,6 +29,11 @@ Use: https://restcountries.eu/rest/v2/all to get all the countries
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Steps
+
+### `nvm use`
+### `yarn && yarn start`
+
 ## Available Scripts
 
 In the project directory, you can run:
