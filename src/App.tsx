@@ -1,25 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { QueryClient, QueryClientProvider } from "react-query";
 
+import { Box, Text, TextField } from "./components/Atoms";
+import { ListOfCountries } from "./components/Organisms";
+import "./App.css";
+
+import { globalStyles } from "./stitches.config";
+const queryClient = new QueryClient();
 function App() {
+  globalStyles();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <Box
+        css={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          gap: "$md",
+          p: "$xl",
+        }}
+      >
+        <Text size="xl">List of countries</Text>
+        <TextField size="md" />
+        <ListOfCountries />
+      </Box>
+    </QueryClientProvider>
   );
 }
 

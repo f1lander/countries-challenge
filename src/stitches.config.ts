@@ -33,6 +33,42 @@ export const {
     colors: {
       cardBackground: "#FFF9F7",
       black: "#FFF9F7",
+      white: "#fff",
+      // red
+      lightRed: "#F5E4E4",
+      mediumRed: "#E6BCBC",
+      darkRed: "#6f3638",
+      red: "#EF7376",
+      redHover: "#CF7073",
+      // gray
+      gray400: "#B5BBBD",
+
+      lightBackground: "#E1E1E1",
+      subtleGray: "#F5F5F5",
+      almostWhite: "#F6F7F8",
+      third: "#EAEAEB",
+      gray: "#EFF3F4",
+
+      lightBorder: "#DEDEDE",
+      lightGray: "#C3CDCF",
+      mediumGray: "#A7B0B4",
+      lightText: "#859296",
+      border: "#939EA1",
+      placeholder: "#99A2A5",
+      placeholderDark: "#7C898D",
+      neutralGrayDark: "#52575C",
+
+      primary: "#5E6F74",
+      text: "#516369",
+      secondary: "#56606f",
+
+      background: "#DFE7E8",
+      pacificBlue: "#00ABBF",
+      selected: "#31A5AC",
+      lightBlue: "#84C7CA",
+      darkBlue: "#5D9C9F",
+      green: "#29D07E",
+      green12: "#58B72B",
     },
     space: {
       ...spaces,

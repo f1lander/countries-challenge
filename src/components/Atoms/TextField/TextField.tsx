@@ -1,60 +1,46 @@
-import type * as Stitches from '@stitches/react';
+import { styled } from "../../../stitches.config";
 
-import { styled } from '../../../stitches.config';
-
-export const TextField = styled('input', {
-  '&:focus': {
-    border: '1px solid $lightBlue',
-    boxSizing: 'border-box',
+export const TextField = styled("input", {
+  "&:focus": {
+    border: "1px solid $lightBlue",
   },
-  '&::placeholder': {
-    color: '$placeholder',
+  "&::placeholder": {
+    color: "$placeholder",
   },
-  display: 'flex',
-  flexDirection: 'row',
-  alignItems: 'center',
-  justifyContent: 'center',
-  background: '$lightBackground',
-  borderRadius: '8px',
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "center",
+  background: "$lightBackground",
+  borderRadius: "8px",
 
-  fontWeight: '$light',
-  fontSize: '$4',
-  lineHeight: '$base',
+  fontWeight: "$light",
+  fontSize: "$7",
+  lineHeight: "$base",
+  padding: "$md",
 
-  textAlign: 'center',
-
-  color: '$text',
+  height: "$2xl",
+  color: "$text",
   variants: {
     size: {
       sm: {
-        width: '175px',
-        height: '48px',
+        width: "calc($2xl * 5)",
       },
       md: {
-        width: '250px',
-        height: '48px',
+        width: "calc($2xl * 10)",
       },
-    },
-    variant: {
-      fund: {
-        width: '200px',
-        fontSize: '$9',
-        fontWeight: '$normal',
-        textAlign: 'right',
-        '&:focus': {
-          border: 'none',
-        },
-        borderRadius: '0px',
+      lg: {
+        width: "calc($2xl * 15)",
       },
     },
     error: {
       true: {
-        border: '1px solid $red',
-        boxSizing: 'border-box',
+        border: "1px solid $red",
+        boxSizing: "border-box",
       },
     },
   },
   defaultVariants: {
-    size: 'md',
+    size: "md",
   },
 });
