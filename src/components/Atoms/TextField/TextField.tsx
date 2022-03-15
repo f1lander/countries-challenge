@@ -25,7 +25,7 @@ export const TextField = styled("input", {
     variant: {
       search: {
         borderRadius: 0,
-        "@xs": {
+        "@sm": {
           width: "$full",
         },
       },
