@@ -12,7 +12,7 @@ export const TextField = styled("input", {
   alignItems: "center",
   justifyContent: "center",
   background: "$lightBackground",
-  borderRadius: "8px",
+  borderRadius: "$3",
 
   fontWeight: "$light",
   fontSize: "$7",
@@ -22,6 +22,11 @@ export const TextField = styled("input", {
   height: "$2xl",
   color: "$text",
   variants: {
+    variant: {
+      search: {
+        borderRadius: 0,
+      },
+    },
     size: {
       sm: {
         width: "calc($2xl * 5)",

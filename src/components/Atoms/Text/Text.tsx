@@ -16,9 +16,9 @@ export const Text = styled("span", {
     },
     error: {
       true: {
-        color: "$redÎ"
-      }
-    }
+        color: "$red",
+      },
+    },
   },
 });
 

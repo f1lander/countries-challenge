@@ -1,12 +1,19 @@
 import { useQuery } from "react-query";
 import axios from "axios";
 
-export const useCountries = () => {
-  return useQuery("allCountries", async () => {
-    const { data } = await axios.get(
-      "https://restcountries.com/v3.1/all"
-    );
+export const useCountries = (param: string | undefined) => {
+  return useQuery(
+    ["allCountries", param],
+    async ({ queryKey }) => {
+      const [_key, country] = queryKey;
 
-    return data;
-  });
+      console.log(country);
+      const endpoint = country ? `/name/${country}` : "/all";
+      const { data } = await axios.get(
+        `https://restcountries.com/v3.1${endpoint}`
+      );
+
+      return data;
+    }
+  );
 };
